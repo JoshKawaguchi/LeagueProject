@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LeagueProject</string>
+    <string-array name="regions">
+        <item>RU</item>
+        <item>KR</item>
+        <item>BR1</item>
+        <item>OC1</item>
+        <item>JP1</item>
+        <item>NA1</item>
+        <item>EUN1</item>
+        <item>TR1</item>
+        <item>LA1</item>
+        <item>LA2</item>
+
+    </string-array>
+</resources>
