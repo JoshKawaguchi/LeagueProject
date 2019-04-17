@@ -6,7 +6,7 @@ public class SummonerResponse {
     private String puuid;
     private String name;
     private int profileIconId;
-    private int revisionDate;
+    private String revisionDate;
     private int summonerLevel;
     SummonerResponse(){}
 
@@ -50,11 +50,11 @@ public class SummonerResponse {
         this.profileIconId = profileIconId;
     }
 
-    public int getRevisionDate() {
+    public String getRevisionDate() {
         return revisionDate;
     }
 
-    public void setRevisionDate(int revisionDate) {
+    public void setRevisionDate(String revisionDate) {
         this.revisionDate = revisionDate;
     }
 

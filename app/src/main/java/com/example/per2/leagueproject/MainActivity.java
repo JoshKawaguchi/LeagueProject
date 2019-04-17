@@ -20,10 +20,13 @@ public class MainActivity extends AppCompatActivity {
     private EditText name;
     private Button search;
     private Spinner region;
+    private String regionArray[];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        regionArray = getResources().getStringArray(R.array.regions);
         wireWidgets();
         search.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,15 +37,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void searchSummoner() {
+        String text = regionArray[region.getSelectedItemPosition()].toLowerCase();
+        String url = "https://"+text+".api.riotgames.com/lol/summoner/v4/summoners/by-name/";
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://")
+                .baseUrl(url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        RecipePuppyService service = retrofit.create(RecipePuppyService.class);
-        Call<Summoner> lyricResponseCall = service.searchByName(region.getSelectedItem().toString(),name.getText().toString());
+        SummonerSearch service = retrofit.create(SummonerSearch.class);
 
-        lyricResponseCall.enqueue(new Callback<Summoner>() {
+        Call<Summoner> summonerResponseCall = service.searchByName(name.getText().toString());
+
+        summonerResponseCall.enqueue(new Callback<Summoner>() {
             @Override
             public void onResponse(Call<Summoner> call, Response<Summoner> response) {
 
@@ -62,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<Summoner> call, Throwable t) {
                 Log.d("ENQUEUE", "onFailure: " + t.getMessage());
+                Toast.makeText(MainActivity.this, "FAIL", Toast.LENGTH_SHORT).show();
             }
         });
     }
