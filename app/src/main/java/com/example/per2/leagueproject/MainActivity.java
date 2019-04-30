@@ -1,8 +1,7 @@
 package com.example.per2.leagueproject;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button search;
     private Spinner region;
     private String regionArray[];
+    private String reg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +28,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         regionArray = getResources().getStringArray(R.array.regions);
         wireWidgets();
+        String reg = regionArray[region.getSelectedItemPosition()].toLowerCase();
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                searchSummoner();
+                search(regionArray[region.getSelectedItemPosition()].toLowerCase(), "summoner",
+                        "summoners", "by-name", "getAccountId");
             }
         });
     }
 
-    private void searchSummoner() {
-        String text = regionArray[region.getSelectedItemPosition()].toLowerCase();
-        String url = "https://"+text+".api.riotgames.com/lol/summoner/v4/summoners/by-name/";
+    public void search(String region, String what, String type, String how, String WhatToGet) {
+        String url = "https://" + region + ".api.riotgames.com/lol/" + what + "/v4/" + type + "/" + how + "/";
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(url)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -51,20 +52,14 @@ public class MainActivity extends AppCompatActivity {
         summonerResponseCall.enqueue(new Callback<Summoner>() {
             @Override
             public void onResponse(Call<Summoner> call, Response<Summoner> response) {
+                if (response.body() != null && !response.body().getAccountId().isEmpty()) {
+                    String accId = response.body().getAccountId();
 
-                if (response.body() != null && !response.body().getId().isEmpty()) {
-//                    String lyrics = response.body().getLyrics().toString();
-//                    Intent Lyrics = new Intent(MainActivity.this,
-//                            displayLyrics.class);
-//
-//                    Lyrics.putExtra(LYRICS, lyrics);
-//                    startActivity(Lyrics);
-                    Toast.makeText(MainActivity.this, "work", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, response.body().getAccountId(), Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(MainActivity.this, "That name doesn't exist", Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onFailure(Call<Summoner> call, Throwable t) {
                 Log.d("ENQUEUE", "onFailure: " + t.getMessage());
@@ -72,6 +67,38 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void searchMatchHistory(String region, String accId) {
+        String url = "https://" + region + ".api.riotgames.com/lol/match/v4/matchlists/by-account/";
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        MatchHistorySearch service = retrofit.create(MatchHistorySearch.class);
+
+        Call<MatchHistory> matchHistoryResponseCall = service.searchByName(accId);
+
+        matchHistoryResponseCall.enqueue(new Callback<MatchHistory>() {
+            @Override
+            public void onResponse(Call<MatchHistory> call, Response<MatchHistory> response) {
+                if (response.body() != null && response.body().getEndIndex() != 0) {
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<MatchHistory> call, Throwable t) {
+                Log.d("ENQUEUE", "onFailure: " + t.getMessage());
+                Toast.makeText(MainActivity.this, "FAIL", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+
+
+
 
     private void wireWidgets() {
         region = findViewById(R.id.spinner_MainActivity_region);
