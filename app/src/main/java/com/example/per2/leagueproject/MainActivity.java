@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
         MatchHistorySearch service = retrofit.create(MatchHistorySearch.class);
 
-        Call<MatchHistory> matchHistoryResponseCall = service.searchByName(accId);
+        Call<MatchHistory> matchHistoryResponseCall = service.searchById(accId);
 
         matchHistoryResponseCall.enqueue(new Callback<MatchHistory>() {
             @Override
@@ -95,7 +95,32 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void searchIndMatch(String region, String gameId) {
+        String url = "https://" + region + ".api.riotgames.com/lol/match/v4/matches/";
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
+        MatchSearch service = retrofit.create(MatchSearch.class);
+
+        Call<Match> matchHistoryResponseCall = service.searchByGame(gameId);
+
+        matchHistoryResponseCall.enqueue(new Callback<Match>() {
+            @Override
+            public void onResponse(Call<Match> call, Response<Match> response) {
+                if (response.body() != null && !response.body().getGameMode().isEmpty()) {
+                    response.body().getParticipantIdentities().get(0).getPlayer();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Match> call, Throwable t) {
+                Log.d("ENQUEUE", "onFailure: " + t.getMessage());
+                Toast.makeText(MainActivity.this, "FAIL", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
 
 
