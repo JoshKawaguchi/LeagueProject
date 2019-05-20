@@ -1,6 +1,6 @@
 {
   "type": "item",
-  "version": "9.9.1",
+  "version": "9.10.1",
   "basic": {
     "name": "",
     "rune": {
@@ -23,8 +23,10 @@
     "depth": 1,
     "consumeOnFull": false,
     "from": [
+
     ],
     "into": [
+
     ],
     "specialRecipe": 0,
     "inStore": true,
@@ -99,6 +101,7 @@
       "PercentSpellVampMod": 0
     },
     "tags": [
+
     ],
     "maps": {
       "1": true,
@@ -188,6 +191,7 @@
         "12": true
       },
       "stats": {
+
       }
     },
     "1006": {
@@ -230,6 +234,7 @@
         "12": true
       },
       "stats": {
+
       }
     },
     "1011": {
@@ -763,6 +768,7 @@
         "12": false
       },
       "stats": {
+
       },
       "effect": {
         "Effect1Amount": "60",
@@ -806,6 +812,7 @@
         "12": false
       },
       "stats": {
+
       },
       "effect": {
         "Effect1Amount": "35",
@@ -941,6 +948,7 @@
         "12": true
       },
       "stats": {
+
       },
       "effect": {
         "Effect1Amount": "0.1"
@@ -1401,6 +1409,7 @@
         "sell": 1838
       },
       "tags": [
+
       ],
       "maps": {
         "10": true,
@@ -1448,6 +1457,7 @@
         "sell": 1750
       },
       "tags": [
+
       ],
       "maps": {
         "10": true,
@@ -1490,12 +1500,13 @@
         "h": 48
       },
       "gold": {
-        "base": 375,
+        "base": 250,
         "purchasable": true,
-        "total": 2625,
-        "sell": 1838
+        "total": 2500,
+        "sell": 1750
       },
       "tags": [
+
       ],
       "maps": {
         "10": true,
@@ -1544,6 +1555,7 @@
         "sell": 1838
       },
       "tags": [
+
       ],
       "maps": {
         "10": true,
@@ -1594,6 +1606,7 @@
         "sell": 1750
       },
       "tags": [
+
       ],
       "maps": {
         "10": true,
@@ -1639,10 +1652,10 @@
         "h": 48
       },
       "gold": {
-        "base": 375,
+        "base": 250,
         "purchasable": true,
-        "total": 2625,
-        "sell": 1838
+        "total": 2500,
+        "sell": 1750
       },
       "tags": [
       ],
@@ -3142,7 +3155,7 @@
     },
     "2422": {
       "name": "Slightly Magical Boots",
-      "description": "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><unique>UNIQUE Passive - Enhanced Movement:</unique> +25 Movement Speed<br><br><unique>UNIQUE Passive:</unique> +10 Movement Speed<br><br>Boots that build from Slightly Magical Boots retains the +10 Movement Speed.",
+      "description": "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><unique>UNIQUE Passive - Enhanced Movement:</unique> +25 Movement Speed<br><br><unique>UNIQUE Passive:</unique> +10 Movement Speed<br><br>Boots that build from Slightly Magical Boots retain the +10 Movement Speed.",
       "colloq": ";",
       "plaintext": "Slightly increases Movement Speed",
       "inStore": false,
@@ -4012,7 +4025,7 @@
     },
     "3028": {
       "name": "Chalice of Harmony",
-      "description": "<stats>+30 Magic Resist<br><mana>+50% Base Mana Regen </mana></stats><br><br><unique>UNIQUE Passive - Harmony:</unique> Grants bonus % Base Health Regen equal to your bonus % Base Mana Regen.</unique>",
+      "description": "<stats>+30 Magic Resist<br><mana>+50% Base Mana Regen </mana></stats><br><br><unique>UNIQUE Passive - Harmony:</unique> Grants bonus % Base Health Regen equal to your bonus % Base Mana Regen.",
       "colloq": ";",
       "plaintext": "Increases Mana and Health Regeneration",
       "from": [
@@ -4724,7 +4737,7 @@
     },
     "3050": {
       "name": "Zeke's Convergence",
-      "description": "<stats>+60 Armor<br>+30 Magic Resist<br><mana>+250 Mana</mana><br>+10% Cooldown Reduction</stats><br><mainText><active>UNIQUE Active - Conduit:</active> Bind to an ally without an existing Conduit.<br><unique>UNIQUE Passive:</unique> Casting your ultimate near your ally surrounds you with a frost storm and ignites your ally's basic attacks for 10 seconds. Enemies inside your frost storm are slowed by 20% and your ally's attacks burn their target for 30% bonus magic damage over 2 seconds (45 second cooldown).<br><br><unlockedPassive>Frostfire Covenant:</unlockedPassive> Your frost storm ignites when it slows a burning enemy, dealing 40 magic damage per second and slowing by 40% instead for 3 seconds.</maintext><br><br><rules>(Champions can only be linked by one Zeke's Convergence at a time.)</rules>",
+      "description": "<stats>+60 Armor<br>+30 Magic Resist<br><mana>+250 Mana</mana><br>+10% Cooldown Reduction</stats><br><mainText><active>UNIQUE Active - Conduit:</active> Bind to an ally without an existing Conduit.<br><unique>UNIQUE Passive:</unique> Casting your ultimate near your ally surrounds you with a frost storm and ignites your ally's basic attacks for 10 seconds. Enemies inside your frost storm are slowed by 20% and your ally's attacks burn their target for 30% bonus magic damage over 2 seconds (45 second cooldown).<br><br><unlockedPassive>Frostfire Covenant:</unlockedPassive> Your frost storm ignites when it slows a burning enemy, dealing 40 magic damage per second and slowing by 40% instead for 3 seconds.</mainText><br><br><rules>(Champions can only be linked by one Zeke's Convergence at a time.)</rules>",
       "colloq": ";haroldandkumar",
       "plaintext": "Grants you and your ally bonuses when you cast your ultimate.",
       "from": [
@@ -7374,7 +7387,7 @@
     },
     "3124": {
       "name": "Guinsoo's Rageblade",
-      "description": "<stats>+25 Attack Damage<br>+25 Ability Power<br>+25% Attack Speed</stats><br><br><passive>Passive: </passive>Basic attacks deal 15 magic damage on hit.<br><unique>UNIQUE Passive - Last Whisper:</unique> Gain 6 (+0.5 per champion level)% <a href='FlatArmorPen'>Armor Penetration</a>.<br><unique>UNIQUE Passive - Dissolve:</unique> Gain 6 (+0.5 per champion level)% <a href='TotalMagicPen'>Magic Penetration</a>.<br><unique>UNIQUE Passive:</unique> Basic attacks grant +8% Attack Speed for 5 seconds (up to 6 stacks). At max stacks, gain <unlockedPassive>Guinsoo's Rage</unlockedPassive>.<br><br><unlockedPassive>Guinsoo's Rage:</unlockedPassive> Every other basic attack triggers on hit effects twice.<br><br><rules><font color='#8c8c8c'>While at half stacks, melee champions' next attack will fully stack Rageblade.</font></rules>",
+      "description": "<stats>+25 Attack Damage<br>+25 Ability Power<br>+25% Attack Speed</stats><br><br><passive>Passive: </passive>Basic attacks deal 15 magic damage on hit.<br><unique>UNIQUE Passive - Last Whisper:</unique> Gain 15% <a href='FlatArmorPen'>Armor Penetration</a>.<br><unique>UNIQUE Passive - Dissolve:</unique> Gain 15% <a href='TotalMagicPen'>Magic Penetration</a>.<br><unique>UNIQUE Passive:</unique> Basic attacks grant +8% Attack Speed for 5 seconds (up to 6 stacks). At max stacks, gain <unlockedPassive>Guinsoo's Rage</unlockedPassive>.<br><br><unlockedPassive>Guinsoo's Rage:</unlockedPassive> Every 3 basic attacks, trigger on hit effects twice.<br><br><rules><font color='#8c8c8c'>While at half stacks, melee champions' next attack will fully stack Rageblade.</font></rules>",
       "colloq": ";",
       "plaintext": "Increases Attack Speed, Armor Penetration, and Magic Penetration",
       "from": [
@@ -7426,8 +7439,9 @@
         "Effect8Amount": "15",
         "Effect9Amount": "1",
         "Effect10Amount": "3",
-        "Effect11Amount": "0.06",
-        "Effect12Amount": "0.5"
+        "Effect11Amount": "0.15",
+        "Effect12Amount": "0",
+        "Effect13Amount": "3"
       },
       "depth": 3
     },
@@ -9369,7 +9383,7 @@
     },
     "3193": {
       "name": "Gargoyle Stoneplate",
-      "description": "<stats>+40 Armor<br>+40 Magic Resist</stats></stats><br><br><unique>UNIQUE Passive - Stone Skin:</unique> If 3+ enemy champions are nearby, grants 40 bonus Armor and Magic Resist.<br><active>UNIQUE Active - Metallicize:</active> Increases Health by 40% and increases champion size, but reduces damage dealt by 60% for 4 seconds (90 second cooldown). If Stone Skin is active, the Health increase becomes 100% instead.",
+      "description": "<stats>+40 Armor<br>+40 Magic Resist</stats><br><br><unique>UNIQUE Passive - Stone Skin:</unique> If 3+ enemy champions are nearby, grants 40 bonus Armor and Magic Resist.<br><active>UNIQUE Active - Metallicize:</active> Increases Health by 40% and increases champion size, but reduces damage dealt by 60% for 4 seconds (90 second cooldown). If Stone Skin is active, the Health increase becomes 100% instead.",
       "colloq": ";",
       "plaintext": "Greatly increases defense near multiple enemies.",
       "from": [
@@ -10657,7 +10671,7 @@
     },
     "3345": {
       "name": "Soul Anchor (Trinket)",
-      "description": "<groupLimit>Limited to 1 Trinket.</groupLimit><br><br><active>Active:</active> Consumes a charge to instantly revive at your Summoner Platform and grants 125% Movement Speed that decays over 12 seconds.<br><br><rules>Additional charges are gained at levels 9 and 14.</rules><br><br><font color='#BBFFFF'>(Max: 2 charges)</font></rules><br><br>",
+      "description": "<groupLimit>Limited to 1 Trinket.</groupLimit><br><br><active>Active:</active> Consumes a charge to instantly revive at your Summoner Platform and grants 125% Movement Speed that decays over 12 seconds.<br><br><rules>Additional charges are gained at levels 9 and 14.</rules><br><br><font color='#BBFFFF'>(Max: 2 charges)</font><br><br>",
       "colloq": "",
       "plaintext": "Consumes charge to revive champion.",
       "inStore": false,
@@ -10872,7 +10886,7 @@
     },
     "3364": {
       "name": "Oracle Lens",
-      "description": "<groupLimit>Limited to 1 Trinket.</groupLimit><br><br><active>Active:</active> Scans around you, warning against hidden hostile units, and revealing invisible traps and revealing / disabling nearby wards for 10 seconds (90 to 60 second cooldown).</maintext>",
+      "description": "<groupLimit>Limited to 1 Trinket.</groupLimit><br><br><active>Active:</active> Scans around you, warning against hidden hostile units, and revealing invisible traps and revealing / disabling nearby wards for 10 seconds (90 to 60 second cooldown).",
       "colloq": "red; lens; trinket",
       "plaintext": "Disables nearby invisible wards and traps for a duration",
       "image": {
@@ -12022,7 +12036,7 @@
     },
     "3508": {
       "name": "Essence Reaver",
-      "description": "<stats>+65 Attack Damage<br>+25% Critical Strike Chance</stats><br><br><unique>UNIQUE Passive:</unique> +20% Cooldown Reduction<br><unique>UNIQUE Passive:</unique> Basic attacks refund 1.5% of your missing mana.",
+      "description": "<stats>+70 Attack Damage<br>+25% Critical Strike Chance</stats><br><br><unique>UNIQUE Passive:</unique> +20% Cooldown Reduction<br><unique>UNIQUE Passive:</unique> Basic attacks refund 1.5% of your missing mana.",
       "colloq": ";",
       "plaintext": "Grants Critical Strike Chance, Cooldown Reduction, Attack Damage and restores mana on hit.",
       "from": [
@@ -12058,7 +12072,7 @@
         "12": true
       },
       "stats": {
-        "FlatPhysicalDamageMod": 65,
+        "FlatPhysicalDamageMod": 70,
         "FlatCritChanceMod": 0.25
       },
       "effect": {
@@ -12134,7 +12148,7 @@
     },
     "3513": {
       "name": "Eye of the Herald",
-      "description": "<br><unique>UNIQUE Passive - Glimpse of the Void:</unique> The holder of the Eye of the Herald has Empowered Recall.<br><br><active>UNIQUE Active:</active> Channel for 3.5 seconds to crush the Eye of the Herald, summoning the Rift Herald to siege enemy turrets.<br><br>The Eye of the Herald will be lost to the Void if not used within 240 seconds.</font>",
+      "description": "<br><unique>UNIQUE Passive - Glimpse of the Void:</unique> The holder of the Eye of the Herald has Empowered Recall.<br><br><active>UNIQUE Active:</active> Channel for 3.5 seconds to crush the Eye of the Herald, summoning the Rift Herald to siege enemy turrets.<br><br>The Eye of the Herald will be lost to the Void if not used within 240 seconds.",
       "colloq": ";Herald's Eye",
       "plaintext": "Eye of the Herald - a Gift of the Void.",
       "consumed": true,
@@ -12212,7 +12226,7 @@
     },
     "3520": {
       "name": "Ghost Poro",
-      "description": "<subtitleLeft><font color='#FFFFFF'>(Trinket)</font></subtitleLeft><br><mainText><active>Active:</active> Command your Ghost Poro to stay in a brush. Gain additional stats if you or your Ghost Poro are in enemy territory.<mainText></mainText>",
+      "description": "<subtitleLeft><font color='#FFFFFF'>(Trinket)</font></subtitleLeft><br><mainText><active>Active:</active> Command your Ghost Poro to stay in a brush. Gain additional stats if you or your Ghost Poro are in enemy territory.</mainText>",
       "colloq": "",
       "plaintext": "",
       "consumed": true,
@@ -12421,7 +12435,7 @@
     },
     "3634": {
       "name": "Tower: Beam of Ruination",
-      "description": "<br><font color='#FF9900'>Attach, then recast to fire a damaging beam from a turret to your cursor.</font><br><br><font color='#FF9900'>First Cast:</font> Attach a Slayer Beam to the target turret that can be fired 3 times.<br></br><font color='#FF9900'>Next Three Casts:</font> Fires the attached beam towards your cursor, dealing 30/level + 30% of the hit target's maximum health (20% damage to minions) in magic damage to all targets in a line.<br></br><br></br>Beam will last 15 seconds, or until it has been fired 3 times.",
+      "description": "<br><font color='#FF9900'>Attach, then recast to fire a damaging beam from a turret to your cursor.</font><br><br><font color='#FF9900'>First Cast:</font> Attach a Slayer Beam to the target turret that can be fired 3 times.<br><br><font color='#FF9900'>Next Three Casts:</font> Fires the attached beam towards your cursor, dealing 30/level + 30% of the hit target's maximum health (20% damage to minions) in magic damage to all targets in a line.<br><br><br><br>Beam will last 15 seconds, or until it has been fired 3 times.",
       "colloq": "",
       "plaintext": "Attaches a three shot beam to a turret which can then be aimed and fired",
       "consumed": true,

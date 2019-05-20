@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Spinner region;
     private String regionArray[];
     private String reg;
+    private ImageView test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         regionArray = getResources().getStringArray(R.array.regions);
         wireWidgets();
+        //use
+        //Picasso.get().load("http://ddragon.leagueoflegends.com/cdn/9.9.1/img/champion/Zoe.png").placeholder(R.drawable.placeholder).into(test);
         String reg = regionArray[region.getSelectedItemPosition()].toLowerCase();
         search.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,5 +133,6 @@ public class MainActivity extends AppCompatActivity {
         region = findViewById(R.id.spinner_MainActivity_region);
         name = findViewById(R.id.editText_MainActivity_Summoner);
         search = findViewById(R.id.button_MainActivity_Search);
+        test = findViewById(R.id.imageView2);
     }
 }
